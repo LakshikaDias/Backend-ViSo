@@ -23,9 +23,9 @@ app.use(bodyParser.json());
 app.use("/api/user", user);
 
 // ChatGPT Endpoint
-
 app.post("/api/download", async (req, res) => {
   const education = req.body;
+  console.log(education);
 
   const prompt = `Summarize the following paragraph into short bullet points: ${education}`;
 
